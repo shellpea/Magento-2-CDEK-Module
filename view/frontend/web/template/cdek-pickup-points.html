@@ -1,0 +1,227 @@
+<div
+    class="cdek-pvz form-shipping-address step-content"
+    data-role="content"
+    data-bind="visible: showCdekListPickupPoints()"
+>
+    <div class="top-block">
+        <h2 class="step-block-title">Выберите пункт выдачи</h2>
+        <p class="point-interest">
+            Найдите интересующий вас пункт выдачи и нажмите кнопку «Получить
+            здесь»
+        </p>
+    </div>
+    <div class="lists" data-bind="blockLoader: isLoading">
+        <div
+            class="pickup-list"
+            data-bind="foreach: pickPointsList, visible: isListView"
+        >
+            <button
+                type="button"
+                class="pickup-list__item"
+                data-bind="click: $parent.showDetailedInfo"
+            >
+                <div>
+                    <p class="name">
+                        <!-- ko text: type --><!-- /ko -->:
+                        <!-- ko text: name --><!-- /ko -->
+                    </p>
+                </div>
+                <i></i>
+            </button>
+        </div>
+        <div class="pickup-point-info" data-bind="visible: isSingleView">
+            <button
+                type="button"
+                class="pickup-point-info__back button"
+                data-bind="click: showListView"
+            >
+                <span class="back-points">К списку пунктов выдачи</span>
+            </button>
+            <div
+                class="pickup-point-info__details"
+                data-bind="with: selectedPvz"
+            >
+                <h4 class="name">
+                    <!-- ko text: type --><!-- /ko -->
+                    <!-- ko text: name --><!-- /ko -->
+                </h4>
+                <p class="type" data-bind="text: type"></p>
+                <div class="list">
+                    <p class="bold" data-bind="text: fullAddress"></p>
+                    <p class="bold">
+                        Режим работы:
+                        <span
+                            class="working-hours"
+                            data-bind="text: workTime"
+                        ></span>
+                    </p>
+                    <p class="bold">
+                        Телефон: <span data-bind="text: phone"></span>
+                    </p>
+                </div>
+                <button
+                    type="button"
+                    class="button"
+                    data-bind="
+                value: code,
+                click: $parent.confirmPvz,
+                text: buttonText,
+                css: { 'button--selected': isSelected }
+                "
+                ></button>
+            </div>
+        </div>
+        <!-- ko if: isYandexMapEnable -->
+        <div
+            id="yandex-map-pvz-list"
+            style="width: 100%; height: 400px; margin-top: 5px"
+            data-bind="map"
+        ></div>
+        <!-- /ko -->
+    </div>
+</div>
+
+<style>
+    .cdek-pvz {
+        --cdek-primary: #1ab248;
+        --cdek-secondary: #30cc5f;
+    }
+
+    .pickup-list {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 4px;
+    }
+    .pickup-list__item {
+        background-color: white;
+        border: 1px solid var(--cdek-primary);
+        color: black;
+        border-radius: 8px;
+    }
+
+    .pickup-list__item:hover {
+        background-color: var(--cdek-primary);
+        border-color: var(--cdek-primary);
+        color: white;
+    }
+    .cdek-pvz .button {
+        background-color: var(--cdek-primary);
+        border: 1px solid var(--cdek-primary);
+        color: white;
+    }
+    .cdek-pvz .button:hover {
+        background-color: var(--cdek-secondary);
+        border-color: var(--cdek-secondary);
+        color: white;
+    }
+    .my-marker {
+        transform: translate(-3px, -28px);
+    }
+
+    .my-marker__pin {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        width: 40px;
+        height: 40px;
+        margin: -2.2em 0 0 -1.3em;
+        padding: 0 3px 3px 0;
+
+        cursor: pointer;
+
+        border-radius: 50% 50% 50% 0;
+        background: var(--cdek-primary);
+        box-shadow: -1px 1px 4px rgba(0, 0, 0, 0.5);
+
+        transform: perspective(40px) rotateX(20deg) rotateZ(-45deg);
+    }
+
+    .my-marker__pin::after {
+        position: absolute;
+
+        width: 1em;
+        height: 1em;
+        margin: 1.1em 0 0 0.9em;
+
+        content: "";
+
+        border-radius: 50%;
+        background: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .my-marker__beacon {
+        position: absolute;
+        z-index: -1;
+
+        width: 3em;
+
+        transform: translateX(-50%);
+    }
+
+    .popup {
+        position: absolute;
+
+        border-radius: 0.5rem;
+        background: #fff;
+        box-shadow: 0 0 8px 0 #0003;
+
+        transform: translate(-90px, calc(-100% - 5px));
+    }
+
+    .popup::before {
+        position: absolute;
+
+        width: 100%;
+        height: 100%;
+
+        content: "";
+
+        opacity: 0.5;
+        border-radius: 0.5rem;
+        background: white;
+    }
+
+    .popup__text {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 150px;
+        padding: 16px 24px;
+
+        text-align: center;
+    }
+
+    .popup__alert-btn {
+        margin-top: 10px;
+
+        font-family: inherit;
+        cursor: pointer;
+
+        border: none;
+        border-radius: 5px;
+    }
+
+    .popup__close {
+        cursor: pointer;
+        background-color: transparent;
+        color: var(--cdek-primary);
+        border: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        width: 24px;
+    }
+
+    .popup__close:hover {
+        background-color: transparent;
+        color: var(--cdek-secondary);
+        border: none;
+    }
+</style>

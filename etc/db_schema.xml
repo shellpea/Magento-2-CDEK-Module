@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="sales_shipment_track">
+        <column xsi:type="boolean" name="label_generated" nullable="true" comment="Do Shipment label need to generate or it has already been created"/>
+        <column xsi:type="varchar" name="order_uuid" nullable="true" length="255" comment="Order identifier in CDEK information system"/>
+        <column xsi:type="varchar" name="cdek_number" nullable="true" length="255" comment="CDEK order number"/>
+        <column xsi:type="varchar" name="barcode_uuid" nullable="true" length="255" comment="Identifier of the barcode CP file"/>
+    </table>
+    <table name="sales_order_address">
+        <column xsi:type="varchar" name="pickup_point" nullable="true" length="255" comment="Code of the CDEK pickup point (PVZ/POSTAMAT) to which the parcel will be delivered"/>
+    </table>
+    <table name="quote_address">
+        <column xsi:type="varchar" name="pickup_point" nullable="true" length="255" comment="Code of the CDEK pickup point (PVZ/POSTAMAT) to which the parcel will be delivered"/>
+    </table>
+</schema>

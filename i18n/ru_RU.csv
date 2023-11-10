@@ -1,0 +1,78 @@
+"Print Shipping Label","Print Shipping Label",module,Shellpea_CDEK
+"CDEK error: ' . . ' <br>Please create a new Shipping Label.","Ошибка Сдек: ' . . ' <br>Пожалуйста, создайте новую этикетку для доставки.",module,Shellpea_CDEK
+"The Url for downloading PDF from CDEK was not generated.","URL-адрес для загрузки PDF-файла со Сдек не был сгенерирован.",module,Shellpea_CDEK
+"'Create Shipping Label ' . . ' for shipment ' .","'Create Shipping Label ' . . ' for shipment ' .",module,Shellpea_CDEK
+"An error occurred while creating shipping label.","Произошла ошибка при создании отгрузочной этикетки.",module,Shellpea_CDEK
+"Webhooks Controller","Webhooks Controller",module,Shellpea_CDEK
+"Shipment was not found. Barcode Uuid = uuid","Shipment was not found. Barcode Uuid = uuid",module,Shellpea_CDEK
+"Content is empty. Uuid = uuid","Content is empty. Uuid = uuid",module,Shellpea_CDEK
+"Box XS (0.5 kg 17x12x9 cm)","Коробка XS (0.5 кг 17x12x9 см)",module,Shellpea_CDEK
+"Box S (2 kg 21x20x11 cm)","Коробка S (2 кг 21x20x11 см)",module,Shellpea_CDEK
+"Box M (5 kg 33x25x15 cm)","Коробка M (5 кг 33x25x15 см)",module,Shellpea_CDEK
+"Box L (12 kg 34x33x26 cm)","Коробка L (12 кг 34x33x26 см)",module,Shellpea_CDEK
+"Box (0.5 kg 17x12x10 cm)","Коробка (0.5 кг 17x12x10 см)",module,Shellpea_CDEK
+"Box (1 kg 24x17x10 cm)","Коробка (1 кг 24x17x10 см)",module,Shellpea_CDEK
+"Box (2 kg 34x24x10 cm)","Коробка (2 кг 34x24x10 см)",module,Shellpea_CDEK
+"Box (3 kg 24x24x21 cm)","Коробка (3 кг 24x24x21 см)",module,Shellpea_CDEK
+"Box (5 kg 40x24x21 cm)","Коробка (5 кг 40x24x21 см)",module,Shellpea_CDEK
+"Box (10 kg 40x35x28 cm)","Коробка (10 кг 40x35x28 см)",module,Shellpea_CDEK
+"Box (15 kg 60x35x29 cm)","Коробка (15 кг 60x35x29 см)",module,Shellpea_CDEK
+"Box (20 kg 47x40x43 cm)","Коробка (20 кг 47x40x43 см)",module,Shellpea_CDEK
+"Box (30 kg 69x39x42 cm)","Коробка (30 кг 69x39x42 см)",module,Shellpea_CDEK
+"Your Packaging","Ваша упаковка",module,Shellpea_CDEK
+"Delivery by courier","Доставка курьером",module,Shellpea_CDEK
+"Delivery to the pick-up point","Доставка в офис (ПВЗ)",module,Shellpea_CDEK
+"Delivery to the parcel terminal","Доставка в постамат",module,Shellpea_CDEK
+"I will bring the parcel to Cdek myself","Я сам доставлю посылку в Сдек",module,Shellpea_CDEK
+"The courier must pick up the parcel","Курьер должен забрать посылку",module,Shellpea_CDEK
+"No packages for request","Нет упаковок для запроса",module,Shellpea_CDEK
+"""Cannot generate webhooks URL: "" .","""Не удается сгенерировать URL-адрес, на который клиент хочет получать вебхуки: "" .",module,Shellpea_CDEK
+"Select Pickup Point","Выберите офис (ПВЗ)",module,Shellpea_CDEK
+"Shipping labels is not available.","Отгрузочные этикетки недоступны.",module,Shellpea_CDEK
+"The response to the request is empty.","Ответ на запрос пуст.",module,Shellpea_CDEK
+"""Couldn't add a subscription to the webhooks: "" .","""Не удалось добавить подписку на Вебхуки: "" .",module,Shellpea_CDEK
+"A subscription to webhooks has already been added.","Подписка на Вебхуки уже добавлена.",module,Shellpea_CDEK
+"Couldn't add a subscription to the webhooks.","Не удалось добавить подписку на Вебхуки.",module,Shellpea_CDEK
+"'CDEK Delivery: ' .","'Доставка Сдек: ' .",module,Shellpea_CDEK
+"CDEK Shipping Information","Информация о доставке Сдек",module,Shellpea_CDEK
+"Select Pickup Point…","Выберите офис (ПВЗ)…",module,Shellpea_CDEK
+CDEK,Сдек,module,Shellpea_CDEK
+Enabled,Включено,module,Shellpea_CDEK
+Title,Заголовок,module,Shellpea_CDEK
+"Account","Идентификатор",module,Shellpea_CDEK
+"Secure Password","Пароль",module,Shellpea_CDEK
+"Test Mode","Тестовый Режим",module,Shellpea_CDEK
+"Web-Services URL (Production)","URL Веб-сервиса (боевой)",module,Shellpea_CDEK
+"Web-Services URL (Testing)","URL Веб-сервиса (тестовый)",module,Shellpea_CDEK
+"How the parcel will be delivered to Cdek?","Как посылка будет доставлена в Сдек?",module,Shellpea_CDEK
+Country,Страна,module,Shellpea_CDEK
+Region/State,Регион,module,Shellpea_CDEK
+"ZIP/Postal Code","Почтовый индекс города",module,Shellpea_CDEK
+City,Город,module,Shellpea_CDEK
+"Street Address","Адрес улицы",module,Shellpea_CDEK
+"Street Address Line 2","Адрес улицы 2",module,Shellpea_CDEK
+"Pickup Point","Список офисов (ПВЗ)",module,Shellpea_CDEK
+"Delivery mode","Режим доставки",module,Shellpea_CDEK
+"Webhooks Enable","Вебхуки Включены",module,Shellpea_CDEK
+"Quantity of copies of the Shipping label","Число копий отгрузочной этикетки",module,Shellpea_CDEK
+"Barcode Format","Формат печати",module,Shellpea_CDEK
+Packaging,Упаковка,module,Shellpea_CDEK
+"Maximum Package Weight","Максимальный Вес Упаковки",module,Shellpea_CDEK
+"Package Length (cm)","Длина Упаковки (см)",module,Shellpea_CDEK
+"Package Width (cm)","Ширина Упаковки (см)",module,Shellpea_CDEK
+"Package Height (cm)","Высота Упаковки (см)",module,Shellpea_CDEK
+"Sort Order","Порядок сортировки",module,Shellpea_CDEK
+"Delivery by Courier","Доставка курьером",module,Shellpea_CDEK
+"Delivery to Pick-up Point","Доставка в ПВЗ",module,Shellpea_CDEK
+"Delivery to Parcel Terminal","Доставка в постамат",module,Shellpea_CDEK
+"Yes","Да",module,Shellpea_CDEK
+"No","Нет",module,Shellpea_CDEK
+"CDEK Delivery","Доставка Сдек",module,Shellpea_CDEK
+". ' (' . . ' days)'",". ' (' . . ' дн)'",module,Shellpea_CDEK
+"days","дн.",module,Shellpea_CDEK,
+"Specify the Pickup Point to which you will bring parcels for further delivery.","Укажите пункт самовывоза, в который вы будете привозить посылки для дальнейшей доставки.",module,Shellpea_CDEK
+"Package Length For Cdek (cm)","Длина Упаковки для СДЕК (см)",module,Shellpea_CDEK
+"Package Width For Cdek (cm)","Ширина Упаковки для СДЕК (см)",module,Shellpea_CDEK
+"Package Height For Cdek (cm)","Высота Упаковки для СДЕК (см)",module,Shellpea_CDEK
+"Enabled Map for Checkout", "Включить интеграцию карты"
+"Yandex Api Key", "Yandex API Ключ"

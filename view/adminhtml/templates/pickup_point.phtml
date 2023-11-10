@@ -1,0 +1,16 @@
+<?php
+/**
+ * @var $block \Magento\Backend\Block\Template
+ */
+
+$url = $block->getUrl('cdek/json/pickupPoint');
+?>
+<script type="text/x-magento-init">
+{
+    "*": {
+        "pickup_point": {
+            "ajaxUrlValue": "<?= $url; ?>"
+        }
+    }
+}
+</script>

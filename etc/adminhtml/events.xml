@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="admin_system_config_save">
+        <observer name="cdek_webhooks_subscription" instance="Shellpea\CDEK\Observer\CdekWebhooks"/>
+    </event>
+</config>

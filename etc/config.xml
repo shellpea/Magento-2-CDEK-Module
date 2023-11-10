@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <carriers>
+            <cdek>
+                <active>0</active>
+                <title>CDEK Delivery</title>
+                <account backend_model="Magento\Config\Model\Config\Backend\Encrypted" />
+                <password backend_model="Magento\Config\Model\Config\Backend\Encrypted" />
+                <enable_yandex_map>0</enable_yandex_map >
+                <yandex_api backend_model="Magento\Config\Model\Config\Backend\Encrypted" />
+                <test_mode>1</test_mode>
+                <production_webservices_url><![CDATA[https://api.cdek.ru/v2/]]></production_webservices_url>
+                <test_webservices_url><![CDATA[https://api.edu.cdek.ru/v2/]]></test_webservices_url>
+                <delivery_mode>4</delivery_mode>
+                <delivery_to_cdek>0</delivery_to_cdek>
+                <country_id>RU</country_id>
+                <postcode>101000</postcode>
+                <copy_count>1</copy_count>
+                <barcode_format>A4</barcode_format>
+                <model>Shellpea\CDEK\Model\Carrier</model>
+                <webhooks_enable>0</webhooks_enable>
+                <max_package_weight>30</max_package_weight>
+                <packaging>YOUR_PACKAGING</packaging>
+                <package_length>30</package_length>
+                <package_width>20</package_width>
+                <package_height>15</package_height>
+            </cdek>
+        </carriers>
+    </default>
+</config>
