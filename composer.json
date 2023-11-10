@@ -1,6 +1,6 @@
 {
   "name": "shellpea/magento-cdek-shipping",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "CDEK shipping module for Magento 2",
   "type": "magento2-module",
   "require": {
